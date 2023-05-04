@@ -1,96 +1,49 @@
 {
-    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "s3ml",
-    "scopeName": "source.s3ml",
-    "patterns": [
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "s3ml",
+  "scopeName": "source.s3ml",
+  "patterns": [
+    {
+      "name": "entity.name.tag.s3ml",
+      "match": "<(/?[a-zA-Z_][a-zA-Z0-9_-]*)(?:\\s+[a-zA-Z_:][a-zA-Z0-9_\\.-]*\\s*=\\s*(?:\"[^\"]*\"|'[^']*'))*\\s*(/?)>"
+    },
+    {
+      "name": "punctuation.definition.tag.s3ml",
+      "match": "</?|/?>"
+    },
+    {
+      "name": "entity.name.rename.s3ml",
+      "match": "<name \"rename\">"
+    },
+    {
+      "name": "entity.name.morphism.s3ml",
+      "match": "-[a-zA-Z_][a-zA-Z0-9_-]*:"
+    },
+    {
+      "name": "punctuation.definition.morphism.s3ml",
+      "match": "-|:"
+    },
+    {
+      "name": "entity.name.description.s3ml",
+      "begin": "~",
+      "end": "~",
+      "patterns": [
         {
-            "name": "entity.name.tag.s3ml",
-            "match": "</?(s3sd|element|property|attribute)\\b"
-        },
-        {
-            "name": "entity.name.attribute.name.s3ml",
-            "match": "\\b(name|type|value|subtype)\\b"
-        },
-        {
-            "name": "string.quoted.double.s3ml",
-            "begin": "\"",
-            "end": "\"",
-            "patterns": [
-                {
-                    "name": "constant.character.escape.s3ml",
-                    "match": "\\\\."
-                }
-            ]
-        },
-        {
-            "name": "comment.block.s3ml",
-            "begin": "<!--",
-            "end": "-->"
-        },
-        {
-            "name": "description",
-            "begin": "~",
-            "end": "~",
-            "patterns": [
-                {
-                    "name": "punctuation.definition.description.s3ml",
-                    "match": "~"
-                },
-                {
-                    "name": "string.quoted.single.python",
-                    "begin": "'",
-                    "end": "'",
-                    "patterns": [
-                        {
-                            "include": "source.python"
-                        }
-                    ]
-                }
-            ]
+          "name": "punctuation.definition.description.s3ml",
+          "match": "~"
         }
-    ],
-    "repository": {
-        "tag-stuff": {
-            "patterns": [
-                {
-                    "name": "punctuation.definition.tag.s3ml",
-                    "match": "</?"
-                },
-                {
-                    "name": "punctuation.definition.tag.s3ml",
-                    "match": "/?>"
-                },
-                {
-                    "name": "entity.name.tag.s3ml",
-                    "match": "[a-zA-Z_][a-zA-Z0-9_-]*"
-                },
-                {
-                    "name": "entity.other.attribute-name.s3ml",
-                    "match": "[a-zA-Z_:][a-zA-Z0-9_\\.-]*"
-                },
-                {
-                    "name": "punctuation.separator.key-value.s3ml",
-                    "match": "="
-                },
-                {
-                    "name": "string.quoted.double.s3ml",
-                    "begin": "\"",
-                    "end": "\"",
-                    "patterns": [
-                        {
-                            "name": "constant.character.escape.s3ml",
-                            "match": "\\\\."
-                        }
-                    ]
-                },
-                {
-                    "name": "entity.name.section.s3ml",
-                    "match": "-[a-zA-Z_][a-zA-Z0-9_-]*:",
-                    "captures": {
-                        "0": {
-                            "name": "punctuation.definition.morphism.s3ml"
-                        }
-                    }
-                }
-            ]}}}
-       
+      ]
+    },
+    {
+      "name": "entity.name.codeblock.s3ml",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "punctuation.definition.codeblock.s3ml",
+          "match": "'"
+        }
+      ]
+    }
+  ]
+}

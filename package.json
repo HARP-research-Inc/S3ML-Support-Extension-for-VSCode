@@ -2,8 +2,9 @@
   "name": "s3ml-support",
   "displayName": "S3ML Syntax Highlighter",
   "description": "An extension which adds syntax highlighting and support for Simplified Semantic System Markup Language files",
-  "version": "1.0.3",
-  "icon": "S3ml logo.png",
+  "version": "1.0.8",
+  "icon": "s3ml-icon.png",
+  "publisher": "TradezoneDevelopmentInc",
   "repository": {
     "type": "git",
     "url": "https://github.com/Tradezone-Development-Inc/S3ML-Support-Extension-for-VSCode.git"
