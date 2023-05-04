@@ -1,0 +1,32 @@
+{
+  "name": "s3ml-support",
+  "displayName": "S3ML Syntax Highlighter",
+  "description": "An extension which adds syntax highlighting and support for Simplified Semantic System Markup Language files",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "s3ml",
+      "aliases": ["Simplified Semantic System Markup Language", "s3ml"],
+      "extensions": [".s3ml",".s3sd"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "s3ml",
+      "scopeName": "source.s3ml",
+      "path": "./syntaxes/s3ml.tmLanguage.json"
+    }],
+    "themes": [
+      {
+        "label": "S3ML Color Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/s3ml-color-theme.json"
+      }
+    ]
+  }
+}

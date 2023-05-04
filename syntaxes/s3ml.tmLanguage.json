@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Simplified Semantic System Markup Language",
+	"patterns": [
+        {
+            "name": "entity.name.tag.s3ml",
+            "match": "</?(s3sd|element|property|attribute)\\b"
+        },
+        {
+            "name": "entity.name.attribute.name.s3ml",
+            "match": "\\b(name|type|value|subtype)\\b"
+        },
+        {
+            "name": "string.quoted.double.s3ml",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.s3ml",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        {
+            "name": "comment.block.s3ml",
+            "begin": "<!--",
+            "end": "-->"
+        }
+	],
+	"repository": {
+        "tag-stuff": {
+            "patterns": [
+                {
+                    "name": "punctuation.definition.tag.s3ml",
+                    "match": "</?"
+                },
+                {
+                    "name": "punctuation.definition.tag.s3ml",
+                    "match": "/?>"
+                },
+                {
+                    "name": "entity.name.tag.s3ml",
+                    "match": "[a-zA-Z_][a-zA-Z0-9_-]*"
+                },
+                {
+                    "name": "entity.other.attribute-name.s3ml",
+                    "match": "[a-zA-Z_:][a-zA-Z0-9_\\.-]*"
+                },
+                {
+                    "name": "punctuation.separator.key-value.s3ml",
+                    "match": "="
+                },
+                {
+                    "name": "string.quoted.double.s3ml",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.s3ml",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+	"scopeName": "source.s3ml"
+}
