@@ -1,6 +1,7 @@
 # S3ML Support Extension for Visual Studio Code
 
-![S3ML Logo](./s3ml-logo.svg)
+![S3ML Logo](https://raw.githubusercontent.com/Tradezone-Development-Inc/S3ML-Support-Extension-for-VSCode/main/S3ml%20logo.png)
+
 
 This Visual Studio Code extension provides syntax highlighting, color theme, and basic editing support for the Simplified Semantic System Markup Language (S3ML).
 
