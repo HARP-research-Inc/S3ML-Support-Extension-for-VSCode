@@ -1,0 +1,2 @@
+# S3ML Support Extension for VSCode
+ This Visual Studio Code extension provides syntax highlighting, color theme, and basic editing support for the Simplified Semantic System Markup Language (S3ML).  S3ML is a flexible, human-readable, and AI-friendly alternative to XML designed for defining, validating, and describing structured data. Its lightweight syntax makes it easy to learn and understand while providing a powerful and versatile tool for organizing and communicating information.
