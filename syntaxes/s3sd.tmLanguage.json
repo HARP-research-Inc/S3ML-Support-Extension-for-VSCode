@@ -1,50 +1,50 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "s3ml",
-  "scopeName": "source.s3ml",
+  "name": "s3sd",
+  "scopeName": "source.s3sd",
   "patterns": [
     {
-      "name": "comment.line.s3ml",
-      "match": "^[^\\s<].*$"
+      "name": "comment.line.s3sd",
+      "match": "^(?!\\s*<\\?).*?$"
     },
     {
-      "name": "entity.name.tag.s3ml",
+      "name": "entity.name.tag.s3sd",
       "match": "<(/?[a-zA-Z_][a-zA-Z0-9_-]*)(?:\\s+[a-zA-Z_:][a-zA-Z0-9_\\.-]*\\s*=\\s*(?:\"[^\"]*\"|'[^']*'))*\\s*(/?)>"
     },
     {
-      "name": "punctuation.definition.tag.s3ml",
+      "name": "punctuation.definition.tag.s3sd",
       "match": "</?|/?>"
     },
     {
-      "name": "entity.name.rename.s3ml",
+      "name": "entity.name.rename.s3sd",
       "match": "<name \"rename\">"
     },
     {
-      "name": "entity.name.morphism.s3ml",
+      "name": "entity.name.morphism.s3sd",
       "match": "-[a-zA-Z_][a-zA-Z0-9_-]*:"
     },
     {
-      "name": "punctuation.definition.morphism.s3ml",
+      "name": "punctuation.definition.morphism.s3sd",
       "match": "-|:"
     },
     {
-      "name": "entity.name.description.s3ml",
+      "name": "entity.name.description.s3sd",
       "begin": "~",
       "end": "~",
       "patterns": [
         {
-          "name": "punctuation.definition.description.s3ml",
+          "name": "punctuation.definition.description.s3sd",
           "match": "~"
         }
       ]
     },
     {
-      "name": "entity.name.codeblock.s3ml",
+      "name": "entity.name.codeblock.s3sd",
       "begin": "'",
       "end": "'",
       "patterns": [
         {
-          "name": "punctuation.definition.codeblock.s3ml",
+          "name": "punctuation.definition.codeblock.s3sd",
           "match": "'"
         }
       ]

@@ -1,9 +1,9 @@
 {
-  "label": "S3ML Color Theme",
+  "label": "S3SD Color Theme",
   "type": "dark",
-  "scope": "source.s3ml",
+  "scope": "source.s3sd",
   "colors": {
-    "editor.foreground": "#3375b7",
+    "editor.foreground": "#124da5",
     "editor.background": "#1E1E1E",
     "editor.selectionBackground": "#ADD6FF",
     "editor.lineHighlightBackground": "#FFFFFF08",
@@ -12,40 +12,52 @@
   },
   "tokenColors": [
     {
-      "scope": "source.s3ml comment.line.s3ml",
+      "scope": "source.s3sd comment.line.s3sd",
       "settings": {
         "foreground": "#536e78"
       }
     },
     {
-      "scope": "source.s3ml entity.name.tag.s3ml",
+      "scope": "source.s3sd entity.name.tag.s3sd",
       "settings": {
         "foreground": "#67cef3"
       }
     },
     {
-      "scope": "source.s3ml entity.name.rename.s3ml",
+      "scope": "source.s3sd entity.name.rename.s3sd",
       "settings": {
         "foreground": "#800080"
       }
     },
     {
-      "scope": "source.s3ml entity.name.morphism.s3ml",
+      "scope": "source.s3sd punctuation.definition.tag.s3sd",
+      "settings": {
+        "foreground": "#d29797"
+      }
+    },
+    {
+      "scope": "source.s3sd entity.name.morphism.s3sd",
       "settings": {
         "foreground": "#1277c4"
       }
     },
     {
-      "scope": "source.s3ml entity.name.description.s3ml",
+      "scope": "source.s3sd entity.name.description.s3sd",
       "settings": {
         "foreground": "#bbbbbb"
       }
     },
     {
-      "scope": "source.s3ml entity.name.codeblock.s3ml",
+      "scope": "source.s3sd entity.name.codeblock.s3sd",
       "settings": {
         "foreground": "#ffffff"
       }
     },
+    {
+      "scope": "source.s3sd punctuation.definition.codeblock.s3sd",
+      "settings": {
+        "foreground": "#c5c5c5"
+      }
+    }
   ]
 }

@@ -2,7 +2,7 @@
   "name": "s3ml-support",
   "displayName": "S3ML Syntax Highlighter",
   "description": "An extension which adds syntax highlighting and support for Simplified Semantic System Markup Language files",
-  "version": "1.0.8",
+  "version": "1.1.1",
   "icon": "s3ml-icon.png",
   "publisher": "TradezoneDevelopmentInc",
   "repository": {
@@ -16,22 +16,60 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "s3ml",
-      "aliases": ["Simplified Semantic System Markup Language", "s3ml"],
-      "extensions": [".s3ml",".s3sd"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "s3ml",
-      "scopeName": "source.s3ml",
-      "path": "./syntaxes/s3ml.tmLanguage.json"
-    }],
+    "languages": [
+      {
+        "id": "s3ml",
+        "aliases": [
+          "Simplified Semantic System Markup Language",
+          "s3ml"
+        ],
+        "extensions": [
+          ".s3ml"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./themes/images/s3ml-file-icon.svg",
+          "dark": "./themes/images/s3ml-file-icon.svg"
+        }
+      },
+      {
+        "id": "s3sd",
+        "aliases": [
+          "Simplified Semantic System Schema Definition",
+          "s3sd"
+        ],
+        "extensions": [
+          ".s3sd"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./themes/images/s3sd-file-icon.svg",
+          "dark": "./themes/images/s3sd-file-icon.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "s3ml",
+        "scopeName": "source.s3ml",
+        "path": "./syntaxes/s3ml.tmLanguage.json"
+      },
+      {
+        "language": "s3sd",
+        "scopeName": "source.s3sd",
+        "path": "./syntaxes/s3sd.tmLanguage.json"
+      }
+    ],
     "themes": [
       {
         "label": "S3ML Color Theme",
         "uiTheme": "vs-dark",
         "path": "./themes/s3ml-color-theme.json"
+      },
+      {
+        "label": "S3SD Color Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/s3sd-color-theme.json"
       }
     ]
   }
